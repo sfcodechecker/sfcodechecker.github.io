@@ -37,11 +37,10 @@
 		
 				$.ajax({
 					type: "POST",
-					enctype: "text/plain",
 					url: "https://atlascons-wired-release-dev-ed.my.salesforce-sites.com/services/apexrest/wired4NPSP/p2prequest",
 					data: data,
 					processData: false,
-					contentType: false,
+					contentType: "text/plain",
 					cache: false,
 					timeout: 600000,
 					success: function (data) {
