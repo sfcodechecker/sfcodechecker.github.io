@@ -38,6 +38,7 @@
 				// disabled the submit button
 				$("#btnSubmit").prop("disabled", true);
 				
+				const reader = new FileReader();
 				var base64 = readAsDataURL(data);
 				console.log(base64);
 		
