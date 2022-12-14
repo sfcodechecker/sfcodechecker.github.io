@@ -38,39 +38,41 @@
 				// disabled the submit button
 				$("#btnSubmit").prop("disabled", true);
 				
+				console.log("data"+data);
 				
 				var MyBlob = new Blob([data], {type : 'multipart/form-data'});
 				console.log(MyBlob instanceof Blob) // true
 				const reader = new FileReader();
 				var base64 = reader.readAsDataURL(MyBlob);
-				console.log(base64);
-		
-		
-				$.ajax({
-					type: "POST",
-					url: "https://atlascons-wired-release-dev-ed.my.salesforce-sites.com/services/apexrest/wired4NPSP/p2prequest",
-					data: data,
-					processData: false,
-					crossDomain : true,
-					contentType: "application/x-www-form-urlencoded",
-					cache: false,
-					timeout: 600000,
-					success: function (data) {
-		
-						$("#result").text(data);
-						console.log("SUCCESS : ", data);
-						$("#btnSubmit").prop("disabled", false);
-		
-					},
-					error: function (e) {
-		
-						$("#result").text(e.responseText);
-						console.log("ERROR : ", e);
-						$("#btnSubmit").prop("disabled", false);
-		
-					}
-				});
-		
+				reader.onloadend = function () {
+					base64data = reader.result;
+					$.ajax({
+						type: "POST",
+						url: "https://atlascons-wired-release-dev-ed.my.salesforce-sites.com/services/apexrest/wired4NPSP/p2prequest",
+						data: base64data,
+						processData: false,
+						crossDomain : true,
+						contentType: "text",
+						cache: false,
+						timeout: 600000,
+						success: function (data) {
+			
+							$("#result").text(data);
+							console.log("SUCCESS : ", data);
+							$("#btnSubmit").prop("disabled", false);
+			
+						},
+						error: function (e) {
+			
+							$("#result").text(e.responseText);
+							console.log("ERROR : ", e);
+							$("#btnSubmit").prop("disabled", false);
+			
+						}
+					});
+				}
+				
+				//console.log(base64);
 			});
 		
 		});
