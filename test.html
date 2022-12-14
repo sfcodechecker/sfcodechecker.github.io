@@ -40,10 +40,10 @@
 				
 				console.log("data"+data);
 				
-				var MyBlob = new Blob([data], {type : 'multipart/form-data'});
+				var MyBlob = new Blob(data, {type : 'multipart/form-data'});
 				console.log(MyBlob instanceof Blob) // true
 				const reader = new FileReader();
-				var base64 = reader.readAsDataURL(MyBlob);
+				var base64 = reader.readAsDataURL(data);
 				reader.onloadend = function () {
 					base64data = reader.result;
 					$.ajax({
