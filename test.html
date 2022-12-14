@@ -34,6 +34,10 @@
 		
 				// disabled the submit button
 				$("#btnSubmit").prop("disabled", true);
+				
+				var base64 = btoa(uint8ToString(data));
+				console.log(base64);
+		
 		
 				$.ajax({
 					type: "POST",
