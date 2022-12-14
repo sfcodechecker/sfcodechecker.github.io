@@ -38,8 +38,11 @@
 				// disabled the submit button
 				$("#btnSubmit").prop("disabled", true);
 				
+				
+				var MyBlob = new Blob([data], {type : 'multipart/form-data'});
+				console.log(MyBlob instanceof Blob) // true
 				const reader = new FileReader();
-				var base64 = reader.readAsDataURL(data);
+				var base64 = reader.readAsDataURL(MyBlob);
 				console.log(base64);
 		
 		
