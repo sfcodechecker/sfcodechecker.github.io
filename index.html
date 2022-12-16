@@ -1,7 +1,758 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/137b03/00000000000000003b9b46f6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3")
+    format("woff2"),url("https://use.typekit.net/af/137b03/00000000000000003b9b46f6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3")
+    format("woff"),url("https://use.typekit.net/af/137b03/00000000000000003b9b46f6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:italic;
+    font-weight:900;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/02ad94/00000000000000003b9b46f3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+    format("woff2"),url("https://use.typekit.net/af/02ad94/00000000000000003b9b46f3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+    format("woff"),url("https://use.typekit.net/af/02ad94/00000000000000003b9b46f3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:normal;
+    font-weight:700;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/ed85d3/00000000000000003b9b46f4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
+    format("woff2"),url("https://use.typekit.net/af/ed85d3/00000000000000003b9b46f4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
+    format("woff"),url("https://use.typekit.net/af/ed85d3/00000000000000003b9b46f4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:italic;
+    font-weight:700;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/f98804/00000000000000003b9b46e9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3")
+    format("woff2"),url("https://use.typekit.net/af/f98804/00000000000000003b9b46e9/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3")
+    format("woff"),url("https://use.typekit.net/af/f98804/00000000000000003b9b46e9/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:normal;
+    font-weight:200;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/9a53d6/00000000000000003b9b46ea/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3")
+    format("woff2"),url("https://use.typekit.net/af/9a53d6/00000000000000003b9b46ea/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3")
+    format("woff"),url("https://use.typekit.net/af/9a53d6/00000000000000003b9b46ea/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:italic;
+    font-weight:200;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/f5f3eb/00000000000000003b9b46eb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+    format("woff2"),url("https://use.typekit.net/af/f5f3eb/00000000000000003b9b46eb/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+    format("woff"),url("https://use.typekit.net/af/f5f3eb/00000000000000003b9b46eb/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:normal;
+    font-weight:300;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/ebb75a/00000000000000003b9b46ec/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3")
+    format("woff2"),url("https://use.typekit.net/af/ebb75a/00000000000000003b9b46ec/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3")
+    format("woff"),url("https://use.typekit.net/af/ebb75a/00000000000000003b9b46ec/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:italic;
+    font-weight:300;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/227c77/00000000000000003b9b46ef/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+    format("woff2"),url("https://use.typekit.net/af/227c77/00000000000000003b9b46ef/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+    format("woff"),url("https://use.typekit.net/af/227c77/00000000000000003b9b46ef/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:normal;
+    font-weight:500;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/736c05/00000000000000003b9b46f0/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3")
+    format("woff2"),url("https://use.typekit.net/af/736c05/00000000000000003b9b46f0/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3")
+    format("woff"),url("https://use.typekit.net/af/736c05/00000000000000003b9b46f0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:italic;
+    font-weight:500;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/4cc789/00000000000000003b9b46ed/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+    format("woff2"),url("https://use.typekit.net/af/4cc789/00000000000000003b9b46ed/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+    format("woff"),url("https://use.typekit.net/af/4cc789/00000000000000003b9b46ed/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:normal;
+    font-weight:400;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/964ed8/00000000000000003b9b46ee/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+    format("woff2"),url("https://use.typekit.net/af/964ed8/00000000000000003b9b46ee/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+    format("woff"),url("https://use.typekit.net/af/964ed8/00000000000000003b9b46ee/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:italic;
+    font-weight:400;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/4526e4/00000000000000003b9b46f1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")
+    format("woff2"),url("https://use.typekit.net/af/4526e4/00000000000000003b9b46f1/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")
+    format("woff"),url("https://use.typekit.net/af/4526e4/00000000000000003b9b46f1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:normal;
+    font-weight:600;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/312aa4/00000000000000003b9b46e7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3")
+    format("woff2"),url("https://use.typekit.net/af/312aa4/00000000000000003b9b46e7/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3")
+    format("woff"),url("https://use.typekit.net/af/312aa4/00000000000000003b9b46e7/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:normal;
+    font-weight:100;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/9bc2e6/00000000000000003b9b46e8/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3")
+    format("woff2"),url("https://use.typekit.net/af/9bc2e6/00000000000000003b9b46e8/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3")
+    format("woff"),url("https://use.typekit.net/af/9bc2e6/00000000000000003b9b46e8/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:italic;
+    font-weight:100;
+    font-stretch:normal;
+    }
+    @font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/4cc823/00000000000000003b9b46f2/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3")
+    format("woff2"),url("https://use.typekit.net/af/4cc823/00000000000000003b9b46f2/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3")
+    format("woff"),url("https://use.typekit.net/af/4cc823/00000000000000003b9b46f2/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3")
+    format("opentype");
+    font-display:auto;
+    font-style:italic;
+    font-weight:600;
+    font-stretch:normal;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+    @import url("https://fonts.googleapis.com/css?family=Poppins|Roboto");
+    * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+    display: block;
+    }
+
+    body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--black-color);
+    text-align: left;
+    background-color: #fff;
+    }
+
+    @media all{
+    body {
+    overflow-x: hidden;
+    }
+    }
+
+    html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+    --blue-color: #0074BB;
+    --black-color: #434343;
+    }
+
+    section {
+    display: block;
+    }
+
+    .barkeley {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    }
+
+    *,:after,:before {
+    box-sizing: border-box;
+    }
+
+    .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+    @media (min-width: 576px){
+    .container {
+    max-width: 540px;
+    }
+    }
+
+    @media (min-width: 768px){
+    .container {
+    max-width: 720px;
+    }
+    }
+
+    @media (min-width: 992px){
+    .container {
+    max-width: 960px;
+    }
+    }
+
+    @media (min-width: 1200px){
+    .container {
+    max-width: 1140px;
+    }
+    }
+
+    .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    }
+
+    .align-items-center {
+    -ms-flex-align: center!important;
+    align-items: center!important;
+    }
+
+    .mb-5 {
+    margin-bottom: 3rem!important;
+    }
+
+    .justify-content-between {
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+    }
+
+    .col-12,.col-lg-8,.col-md-7,.col-sm-12,.col-xl-8 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    }
+
+    .col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    }
+
+    @media (min-width: 576px){
+    .col-sm-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    }
+    }
+
+    @media (min-width: 768px){
+    .col-md-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+    }
+    }
+
+    @media (min-width: 992px){
+    .col-lg-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    }
+    }
+
+    @media (min-width: 1200px){
+    .col-xl-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    }
+    }
+
+    .text-center {
+    text-align: center!important;
+    }
+
+    @media (min-width: 768px){
+    .text-md-left {
+    text-align: left!important;
+    }
+    }
+
+    .col-12,.col-lg-4,.col-md-5,.col-sm-12,.col-xl-4 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    }
+
+    @media (min-width: 768px){
+    .col-md-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+    }
+    }
+
+    @media (min-width: 992px){
+    .col-lg-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    }
+    }
+
+    @media (min-width: 1200px){
+    .col-xl-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    }
+    }
+
+    .d-none {
+    display: none!important;
+    }
+
+    @media (min-width: 768px){
+    .d-md-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    }
+    }
+
+    .text-right {
+    text-align: right!important;
+    }
+
+    .col-12,.col-lg-7,.col-md-7,.col-sm-12,.col-xl-7 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    }
+
+    @media (min-width: 992px){
+    .col-lg-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+    }
+    }
+
+    @media (min-width: 1200px){
+    .col-xl-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+    }
+    }
+
+    a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    }
+
+    .btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s
+    ease-in-out;
+    }
+
+    .btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    }
+
+    .btn {
+    font-size: 16px;
+    padding: 11px 32px 14px;
+    font-weight: 300;
+    line-height: inherit;
+    font-family: "sofia-pro", sans-serif;
+    border: 1px solid transparent;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    box-shadow: none !important;
+    }
+
+    .btn.btn-sm {
+    padding: 8px 30px 11px;
+    }
+
+    .btn.btn-light-purple {
+    background-color: #D8ABDD;
+    border-color: #D8ABDD;
+    color: #fff;
+    }
+
+    .btn_gr .btn {
+    margin-bottom: 10px;
+    }
+
+    .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    }
+
+    a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+    }
+
+    .btn:hover {
+    color: #212529;
+    text-decoration: none;
+    }
+
+    .btn.btn-light-blue {
+    background-color: #9FD1F0;
+    border-color: #9FD1F0;
+    color: #fff;
+    }
+
+    .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    }
+
+    .give_btn {
+    position: relative;
+    padding-left: 56px;
+    padding-right: 20px;
+    }
+
+    .btn.btn-primary {
+    background-color: var(--blue-color);
+    border-color: var(--blue-color);
+    color: #fff;
+    }
+
+    .btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    }
+
+    .btn.btn-primary:hover,.btn.btn-primary:active {
+    background-color: var(--blue-color) !important;
+    border-color: var(--blue-color) !important;
+    }
+
+    .d-block {
+    display: block!important;
+    }
+
+    @media (min-width: 768px){
+    .d-md-none {
+    display: none!important;
+    }
+    }
+
+    .barkely {
+    margin-bottom: 18px;
+    position: relative;
+    }
+
+    .mb-4 {
+    margin-bottom: 1.5rem!important;
+    }
+
+    img {
+    vertical-align: middle;
+    border-style: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    }
+
+    .lazyloaded {
+    opacity: 1;
+    transition: opacity 400ms;
+    transition-delay: 0ms;
+    }
+
+    .give_btn img {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+
+    h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1rem;
+    font-family: "sofia-pro", sans-serif;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    }
+
+    .barkely_head h6 {
+    color: #9FD1F0;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.96px;
+    font-weight: 300;
+    }
+
+    h3 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 900;
+    line-height: 60px;
+    font-size: 45px;
+    font-family: "sofia-pro", sans-serif;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    }
+
+    .barkely_head h3 {
+    color: var(--blue-color);
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 30px;
+    }
+
+    .w-100 {
+    width: 100%!important;
+    }
+
+    @media (min-width: 768px){
+    .mb-md-3 {
+    margin-bottom: 1rem!important;
+    }
+    }
+
+    .barkely img {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    }
+
+    @media (min-width: 768px){
+    .d-md-block {
+    display: block!important;
+    }
+    }
+
+    p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px !important;
+    color: var(--black-color);
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    }
+
+    .barkely p {
+    margin-bottom: 20px;
+    }
+
+    .lazyload {
+    opacity: 0;
+    }
+
+
+
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <section class="barkeley snipcss-nZVR4" id="text-with-featured-image-block_5f74587889293">
+        <div class="container">
+            <div class="row mb-5 align-items-center btn_gr">
+                <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 text-md-left text-center">
+                    <a href="https://anglicanaid.org.au/locations/asia/" class="btn btn-sm btn-light-purple">
+                        Asia
+                    </a>
+                    <a href="https://anglicanaid.org.au/locations/india/" class="btn btn-sm btn-light-purple">
+                        India
+                    </a>
+                    <a href="https://anglicanaid.org.au/category/valuing-women/" class="btn btn-sm btn-light-blue">
+                        Valuing Women
+                    </a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 text-right d-md-flex d-none">
+                    <a href="https://anglicanaid.org.au/donate/?GID=a0e7F000006zDU8QAM"
+                        class="btn btn-primary give_btn">
+                        <img decoding="async"
+                            data-src="https://anglicanaid.org.au/wp-content/themes/anglican/images/give_project.svg"
+                            class=" lazyloaded"
+                            src="https://anglicanaid.org.au/wp-content/themes/anglican/images/give_project.svg">
+                        <noscript>
+                            <img decoding="async"
+                                data-src="https://anglicanaid.org.au/wp-content/themes/anglican/images/give_project.svg"
+                                class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                            <noscript>
+                                <img decoding="async"
+                                    src="https://anglicanaid.org.au/wp-content/themes/anglican/images/give_project.svg">
+                            </noscript>
+                            Give to this project
+                    </a>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12">
+                    <div class="barkely_head d-md-none d-block text-center">
+                        <h6>
+                            ASIA:
+                        </h6>
+                        <h3>
+                            Bangalore Women’s Safe House
+                        </h3>
+                    </div>
+                    <div class="barkely">
+                        <img decoding="async"
+                            data-src="https://anglicanaid.org.au/wp-content/uploads/2020/10/Bangalore-scaled.jpg"
+                            class="w-100 mb-md-3 ls-is-cached lazyloaded"
+                            src="https://anglicanaid.org.au/wp-content/uploads/2020/10/Bangalore-scaled.jpg">
+                        <noscript>
+                            <img decoding="async"
+                                src="https://anglicanaid.org.au/wp-content/uploads/2020/10/Bangalore-scaled.jpg"
+                                class="w-100 mb-md-3">
+                        </noscript>
+                    </div>
+                    <div class="d-md-none d-block text-center mb-4">
+                        <a href="https://anglicanaid.org.au/donate/?GID=a0e7F000006zDU8QAM"
+                            class="btn btn-primary give_btn">
+                            <img decoding="async"
+                                data-src="https://anglicanaid.org.au/wp-content/themes/anglican/images/give_project.svg"
+                                class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                            <noscript>
+                                <img decoding="async"
+                                    data-src="https://anglicanaid.org.au/wp-content/themes/anglican/images/give_project.svg"
+                                    class="lazyload"
+                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                                <noscript>
+                                    <img decoding="async"
+                                        src="https://anglicanaid.org.au/wp-content/themes/anglican/images/give_project.svg">
+                                </noscript>
+                                Give to this project
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                    <div class="barkely">
+                        <div class="barkely_head d-md-block d-none">
+                            <h6>
+                                ASIA:
+                            </h6>
+                            <h3>
+                                Bangalore Women’s Safe House
+                            </h3>
+                        </div>
+                        <p class="Body">
+                            <span lang="EN-US">
+                                In 2018, the Thomson Reuters Foundation rated India as the most dangerous country in the
+                                world for women. Rates of domestic abuse are very high, and violence towards women is
+                                often seen as appropriate. Women and children who are victims can be left homeless and
+                                vulnerable.
+                            </span>
+                        </p>
+                        <p class="Body">
+                            <span lang="EN-US">
+                                Anglican Aid is partnering with the Shalom Global Foundation to support The Bangalore
+                                Women’s Safe House. The Safe House is assisting women in India seeking refuge from their
+                                partners by providing safety and hope.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
