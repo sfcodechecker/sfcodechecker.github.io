@@ -1,7 +1,7 @@
 {
 "siteURL":"https://trial-ac011.my.salesforce-sites.com/services/apexrest/",
 "orgid":"00D2w00000MGUqR",
-"campaignid":"7012w000001B7WXAA0",
+"campaignid":"7012w000001BVzmAAG",
 "gateway":"stripe",
 "p2pIframeURL":"https://trial-ac011.my.salesforce-sites.com/wired4NPSP__donate",
 "save_children_from_hunger":"https://trial-ac011.my.salesforce-sites.com/apex/wired4NPSP__donate?id=a1U2w000000hF1bEAE",
