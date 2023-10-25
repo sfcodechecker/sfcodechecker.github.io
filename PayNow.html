@@ -3,8 +3,8 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet"/>
-	
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC3sUW1ZxHe-iUSw98Chy55p-K90Fej0E&sensor=false&libraries=places"></script>
+    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC3sUW1ZxHe-iUSw98Chy55p-K90Fej0E&sensor=false&libraries=places"></script>
     <style>
         :root {
             --theme-color: #ba3642;
@@ -1555,11 +1555,16 @@
             
             google.maps.event.addListener(autocomplete, 'place_changed', function () {
                 var address = getShortAddressObject(autocomplete.getPlace());
+                
+                var streetAdr = address.street_number != undefined ? address.street_number : '';
+                streetAdr += address.route != undefined ? ' '+address.route : '';
+                
+                document.getElementById('street').value = streetAdr;
                 document.getElementById('country').value = address.country != undefined ? address.country : '' ;
                 document.getElementById('postal_code').value = address.postal_code != undefined ? address.postal_code : '' ;
                 document.getElementById('city').value = address.locality != undefined ? address.locality : '' ;
                 document.getElementById('state').value = address.administrative_area_level_1 != undefined ? address.administrative_area_level_1 : '' ;
-                document.getElementById('full_address').value = autocomplete.getPlace().formatted_address;
+                
             });
         }
         
@@ -1978,7 +1983,7 @@
                                     <input type="hidden" id="startdate" name="startdate" value=""/>
                                     <input type="hidden" id="paymentmethod" name="paymentmethod" value="Credit Card"/>
                                     <input type="hidden" id="gatewayname" name="gatewayname" value="payway"/>
-				    <input type="hidden" id="environment" name="environment" value="NPC">
+                                    <input type="hidden" id="environment" name="environment" value="NPC">
                                     
                                     <div class="step" id="step1">
                                         <div class="container-wph">
@@ -2088,14 +2093,14 @@
                                         </p>
                                     </div>
                                     <div class="hid-5p5 step" id="step2" style="display: none;">
-                                	<div class="form-group-19l">
-                                                <div class="form-group-19l">
-                                                    <span style="display: block;"></span>
-                                                    <input type="text" style="margin-bottom: -15px;" name="organisationName" class="form-control-te5" id="organisationName" placeholder="Organisation Name" onblur="onFocusLeft('organisationName')" onfocus="removeOutline('organisationName')"/>
-                                                </div>
+                                        <div class="form-group-19l">
+                                            <div class="form-group-19l">
+                                                <span style="display: block;"></span>
+                                                <input type="text" style="margin-bottom: -15px;" name="organisationName" class="form-control-te5" id="organisationName" placeholder="Organisation Name" onblur="onFocusLeft('organisationName')" onfocus="removeOutline('organisationName')"/>
+                                            </div>
                                         </div>       
-				<div class="row-zdo">
-					<div class="col-4fx">
+                                        <div class="row-zdo">
+                                            <div class="col-4fx">
                                                 <div class="form-group-19l">
                                                     <span class="required-text label-required-text" style="display: none;"></span>
                                                     <input type="text" name="firstname" class="form-control-te5" id="firstname" placeholder="First Name" onblur="onFocusLeft('firstname')" onfocus="removeOutline('firstname')"/>
@@ -2125,7 +2130,9 @@
                                         <div class="form-group-19l">
                                             Find your address
                                             <input type="text" id="txtPlaces" onclick="getGoogleAddress();" class="form-control-te5" placeholder="Find your address" autocomplete="off" value="" /></br>
-                                            <textarea class="form-control-te5" id="full_address" placeholder="Your Address"></textarea>
+                                        </div>
+                                        <div class="form-group-19l">
+                                            <input type="text" class="form-control-te5" id="street" name="street" placeholder="Street"/>
                                         </div>
                                         <div class="row-zdo">
                                             <div class="col-4fx">
@@ -2151,13 +2158,13 @@
                                                 </div>
                                             </div>
                                         </div>
-					<div class="field-zcb checkbox-n1l" style="margin-bottom: 10px;">
-						<label for="anonymous">
-							<input type="checkbox" name="anonymous" id="is-anonymous"  />
-							<span class="field-lot" onclick="setAnonymousText()">Keep my donation anonymous</span>
-							<br/>
-						</label>
-					</div>
+                                        <div class="field-zcb checkbox-n1l" style="margin-bottom: 10px;">
+                                            <label for="anonymous">
+                                                <input type="checkbox" name="anonymous" id="is-anonymous"  />
+                                                <span class="field-lot" onclick="setAnonymousText()">Keep my donation anonymous</span>
+                                                <br/>
+                                            </label>
+                                        </div>
                                         <div class="row-zdo row-w6i">
                                             <div class="col-ax9">
                                                 <button type="button" id="ste-yct" onclick="prevStep()" style="opacity: 0.8;">
@@ -2223,8 +2230,4 @@
         </div>
     </div>
 </body>
-
-
-
-
 </html>
