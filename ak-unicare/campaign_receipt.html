@@ -42,7 +42,7 @@
 			}
 			console.log('here');
 			if(ref_obj.paymentResponse.includes('Payment was setup') 
-				|| ref_obj.paymentResponse.includes('was charged') 
+				|| ref_obj.paymentResponse.includes('successful') 
 			   	|| ref_obj.paymentResponse.includes('Gift Commitment was setup'))
 			{
 				if(ref_obj.chargeType == "OneTime")
